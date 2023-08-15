@@ -1,0 +1,81 @@
+spring:
+  mvc:
+    throw-exception-if-no-handler-found: true
+  jpa:
+    database: default
+    database-platform: org.hibernate.dialect.SQLServer2008Dialect
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+  main:
+    allow-bean-definition-overriding: true
+
+server:
+  error:
+    whitelabel:
+      enabled: false
+    include-exception: true
+  max-http-header-size: ${MAX_HEADER_SIZE:15KB}
+
+eureka:
+  instance:
+    preferIpAddress: true
+    ip-address: ${DOCKER_HOST_IP:${hostIp}}
+    lease-renewal-interval-in-seconds: 30 #cada 30 segundos enviara una pulsacion
+    lease-expiration-duration-in-seconds: 90 #define el tiempo que el server esperara sin pulsacion
+    instance-id: ${spring.application.name}:${random.value}
+    appname: ${STAGE}-${spring.application.name}
+    virtual-host-name: ${eureka.instance.appname}
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    registry-fetch-interval-seconds: 15  #cada 15 hara refresh de las instancias del discovery
+
+springdoc:
+  title: @project.name@
+  description: @project.name@
+  version: @project.version@
+  api-docs:
+    path: /openapi
+
+feign:
+  cachesApi:
+    name: cachesApi
+    path: caches/v0
+  authApi:
+    name: authApi
+    path: /v0/user
+  auditApi:
+    name: transversal-backofficeApi
+    path: /audits/v1
+
+cache:
+  tokens:
+    key-space: tokens
+    default-ttl: 60
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+btservice:
+  url: ${BTSERVICE_URL:http://166.108.6.45:9075/bantotal/servlet}
+  connectTimeout: 10000
+  readTimeout: 30000
+  endpoint:
+    professions: /com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerProfesiones
+    documentTypes: /com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerTiposDeDocumento
+    cities: /com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerCiudadesLocalidades
+    cities-by-country: /com.dlya.bantotal.odwsbt_BTSConfig_v1?ListarCiudades
+    departments: /com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerEstadosProvinciasDepartamentos
+    countries: /com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerPaises
+    neighborhoods: /com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerBarriosColonias
+    exchangerates: /com.dlya.bantotal.odwsbt_BTSGeneric?ObtenerCotizaciones
+    calendars: /com.dlya.bantotal.odwsbt_BTSGeneric?ObtenerDiasNoHabiles
+    banks: /com.dlya.bantotal.odwsbt_BTSNotifications_v1?ObtenerListadoBancos
+    branches: /com.dlya.bantotal.odwsbt_BTSConfig?ObtenerSucursalesGNB
+    codigosswift: /com.dlya.bantotal.odwsbt_BTSGeneric?ObtenerCodigosSwift
