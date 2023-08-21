@@ -1,28 +1,23 @@
 package py.com.jaha.api.general;
 
+import static py.com.jaha.api.general.constants.GlobalConstants.HOST_IP_NAME;
+
 import java.net.InetAddress;
 import java.util.Locale;
 import java.util.TimeZone;
-
+import javax.annotation.PostConstruct;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
-import org.springframework.context.annotation.Import;
 import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.EnableAsync;
 
-import lombok.extern.slf4j.Slf4j;
-import py.com.bbva.api.apiaudit.ApiAuditApplication;
-import py.com.bbva.api.apicommon.ApiCommonApplication;
-import py.com.bbva.api.apicommon.constants.GlobalConstants;
-
-import javax.annotation.PostConstruct;
-
 @SpringBootApplication
-@Import({ApiCommonApplication.class, ApiAuditApplication.class})
+//@Import({ApiCommonApplication.class, ApiAuditApplication.class})
 @RefreshScope
 @EnableAspectJAutoProxy()
 @EnableAsync
@@ -34,7 +29,7 @@ public class GeneralApplication {
 
         try {
             String hostAddress = InetAddress.getLocalHost().getHostAddress();
-            System.setProperty(GlobalConstants.HOST_IP_NAME, hostAddress);
+            System.setProperty(HOST_IP_NAME, hostAddress);
         } catch (Exception e) {
             log.error("No se pudo obtener la ip para el hostIp attr");
         }

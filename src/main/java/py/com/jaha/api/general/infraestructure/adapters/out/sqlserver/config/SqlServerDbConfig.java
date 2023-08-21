@@ -40,7 +40,7 @@ public class SqlServerDbConfig {
             @Qualifier("sqlServerDataSource") DataSource dataSource) {
 
         return builder.dataSource(dataSource)
-                .packages("py.com.bbva.api.general.infraestructure.adapters.out.sqlserver.**.entities")
+                .packages("py.com.jaha.api.general.infraestructure.adapters.out.sqlserver.**.entities")
                 .persistenceUnit("sqlServer")
                 .build();
     }

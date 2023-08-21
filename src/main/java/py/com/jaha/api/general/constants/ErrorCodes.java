@@ -3,8 +3,6 @@ package py.com.jaha.api.general.constants;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-import javax.websocket.CloseReason;
-
 @Getter
 @AllArgsConstructor
 public enum ErrorCodes {

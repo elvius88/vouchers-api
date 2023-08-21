@@ -1,4 +1,4 @@
-package py.com.jaha.api.general.infraestructure.adapters.in.cities;
+package py.com.jaha.api.general.infraestructure.adapters.in.states;
 
 import static py.com.jaha.api.general.constants.GlobalConstants.API_BASE;
 import static py.com.jaha.api.general.infraestructure.adapters.commons.ApiVersions.API_VERSION_V1;
@@ -23,20 +23,20 @@ import py.com.jaha.api.general.infraestructure.adapters.commons.ApiResponse;
 
 @RestController
 @RequestMapping(value = "/" + API_BASE + "/general/" + API_VERSION_V1)
-@Tag(name = "CityResource")
+@Tag(name = "StateResource")
 @RequiredArgsConstructor
 @Slf4j
-public class CityResource {
+public class StateResource {
 
     private final GetCitiesPort getCitiesUseCase;
 
-    @Operation(summary = "Cities", description = "Get Cities")
+    @Operation(summary = "States", description = "Get States")
     @ApiResponses(value = {
             @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "200", description = "Ok", content = @Content(mediaType = "application/json", schema = @Schema(implementation = String.class))),
             @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "400", description = "Bad Request", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ApiError.class))),
             @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "401", description = "Unauthorized", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ApiError.class))),
             @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "500", description = "Internal Server Error", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ApiError.class))) })
-    @GetMapping("/cities")
+    @GetMapping("/states")
     @ResponseStatus(HttpStatus.OK)
     public ApiResponse<String> getCities(
             @RequestParam(required = false) String countryCode,

@@ -1,6 +1,6 @@
 FROM core.harbor.work.py.igrupobbva/runes/base-api:0.1.0
 
-LABEL "py.com.bbva.api.general-api.version"=@project.version@
+LABEL "py.com.jaha.api.general-api.version"=@project.version@
 
 RUN mkdir -p /usr/local/@project.artifactId@
 ADD @project.build.finalName@.jar /usr/local/@project.artifactId@/
