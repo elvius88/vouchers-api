@@ -1,7 +1,7 @@
 package py.com.jaha.api.general.infraestructure.adapters.in.states;
 
 import static py.com.jaha.api.general.constants.GlobalConstants.API_BASE;
-import static py.com.jaha.api.general.infraestructure.adapters.commons.ApiVersions.API_VERSION_V1;
+import static py.com.jaha.api.general.commons.ApiVersions.API_VERSION_V1;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -17,9 +17,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import py.com.jaha.api.general.domain.ports.in.GetCitiesPort;
-import py.com.jaha.api.general.infraestructure.adapters.commons.ApiError;
-import py.com.jaha.api.general.infraestructure.adapters.commons.ApiException;
-import py.com.jaha.api.general.infraestructure.adapters.commons.ApiResponse;
+import py.com.jaha.api.general.commons.ApiError;
+import py.com.jaha.api.general.commons.ApiException;
+import py.com.jaha.api.general.commons.ApiResponse;
 
 @RestController
 @RequestMapping(value = "/" + API_BASE + "/general/" + API_VERSION_V1)

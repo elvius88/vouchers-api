@@ -6,7 +6,7 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
 import static org.springframework.http.HttpStatus.UNAUTHORIZED;
 
 import lombok.experimental.UtilityClass;
-import py.com.jaha.api.general.infraestructure.adapters.commons.ApiException;
+import py.com.jaha.api.general.commons.ApiException;
 
 @UtilityClass
 public class ErrorHandler {

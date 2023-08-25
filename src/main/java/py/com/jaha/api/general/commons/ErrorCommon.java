@@ -1,10 +1,4 @@
-package py.com.jaha.api.general.infraestructure.adapters.commons;
-
-import static java.util.Objects.nonNull;
-import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
-import static py.com.jaha.api.general.domain.models.commons.enums.GlobalErrorCodes.GLOBAL_UNEXPECTED_ERROR_CODE;
-
-import org.springframework.http.HttpStatus;
+package py.com.jaha.api.general.commons;
 
 public class ErrorCommon {
 	

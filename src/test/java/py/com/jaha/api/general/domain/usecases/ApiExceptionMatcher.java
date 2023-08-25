@@ -2,7 +2,7 @@ package py.com.jaha.api.general.domain.usecases;
 
 import org.hamcrest.Description;
 import org.hamcrest.TypeSafeMatcher;
-import py.com.jaha.api.general.infraestructure.adapters.commons.ApiException;
+import py.com.jaha.api.general.commons.ApiException;
 
 public class ApiExceptionMatcher extends TypeSafeMatcher<ApiException> {
 

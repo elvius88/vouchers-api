@@ -1,4 +1,4 @@
-package py.com.jaha.api.general.infraestructure.adapters.commons;
+package py.com.jaha.api.general.commons;
 
 import java.util.List;
 import lombok.Getter;
