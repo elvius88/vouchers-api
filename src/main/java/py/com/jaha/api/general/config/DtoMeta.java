@@ -12,6 +12,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @JacksonAnnotationsInside
 @JsonIgnoreProperties(ignoreUnknown = true)
-@JsonFilter("filtrable")
+@JsonFilter("filterable")
 public @interface DtoMeta {
 }

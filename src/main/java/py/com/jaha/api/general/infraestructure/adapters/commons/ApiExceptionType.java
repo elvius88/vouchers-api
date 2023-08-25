@@ -8,5 +8,6 @@ public enum ApiExceptionType {
   WARNING,
   ERROR,
   FATAL,
+  APPLICATION,
   CRITICAL;
 }
