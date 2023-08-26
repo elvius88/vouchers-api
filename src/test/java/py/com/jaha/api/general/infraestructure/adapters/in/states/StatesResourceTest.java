@@ -29,10 +29,10 @@ import py.com.jaha.api.general.infraestructure.adapters.in.cities.CityResource;
     RefreshAutoConfiguration.class,
     GetStatesUseCaseConfig.class
 })
-@WebMvcTest(CityResource.class)
+@WebMvcTest(StateResource.class)
 public class StateResourceTest {
 
-    private final String CITIES_BASE_URL= "/" + API_BASE + "/general/" + API_VERSION_1 + "/states";
+    private final String STATES_BASE_URL = "/" + API_BASE + "/general/" + API_VERSION_1 + "/states";
 
     @Autowired
     private MockMvc mvc;
@@ -41,24 +41,10 @@ public class StateResourceTest {
     private GetStatesPort getStatesUseCase;
 
     @Test
-    public void getCitiesByCountriesAndDepartment_success() throws Exception {
+    public void getStatesByCountry_success() throws Exception {
         HttpHeaders httpHeaders = new HttpHeaders();
 
-        MockHttpServletResponse response = mvc.perform(get(CITIES_BASE_URL)
-                .param("countryCode","586")
-                .param("departmentCode","11")
-                .accept(MediaType.APPLICATION_JSON)
-                .headers(httpHeaders)
-        ).andReturn().getResponse();
-        String body=response.getContentAsString();
-        assertThat(response.getStatus()).isEqualTo(HttpStatus.OK.value());
-    }
-
-    @Test
-    public void getCitiesByCountry_success() throws Exception {
-        HttpHeaders httpHeaders = new HttpHeaders();
-
-        MockHttpServletResponse response = mvc.perform(get(CITIES_BASE_URL)
+        MockHttpServletResponse response = mvc.perform(get(STATES_BASE_URL)
                 .param("countryCode","586")
                 .accept(MediaType.APPLICATION_JSON)
                 .headers(httpHeaders)

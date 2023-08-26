@@ -16,10 +16,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+import py.com.jaha.api.general.domain.commands.cities.GetCitiesResponse;
 import py.com.jaha.api.general.domain.ports.in.GetCitiesPort;
 import py.com.jaha.api.general.commons.ApiError;
 import py.com.jaha.api.general.commons.ApiException;
 import py.com.jaha.api.general.commons.ApiResponse;
+import py.com.jaha.api.general.infraestructure.adapters.mappers.CitiesCommandMapper;
 
 @RestController
 @RequestMapping(value = "/" + API_BASE + "/general/" + API_VERSION_V1)
@@ -38,13 +40,13 @@ public class CityResource {
             @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "500", description = "Internal Server Error", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ApiError.class))) })
     @GetMapping("/cities")
     @ResponseStatus(HttpStatus.OK)
-    public ApiResponse<String> getCities(
+    public ApiResponse<GetCitiesResponse> getCities(
             @RequestParam(required = false) String countryCode,
             @RequestParam(required = false) String departmentCode) throws ApiException {
         return ApiResponse.of(processGetCities(countryCode, departmentCode));
     }
 
-    private String processGetCities(String countryCode, String departmentCode){
-        return "";
+    private GetCitiesResponse processGetCities(String countryCode, String stateCode){
+        return getCitiesUseCase.execute(CitiesCommandMapper.INSTANCE.toCommand(countryCode, stateCode));
     }
 }
