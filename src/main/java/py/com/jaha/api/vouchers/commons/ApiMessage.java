@@ -1,6 +1,6 @@
-package py.com.jaha.api.general.commons;
+package py.com.jaha.api.vouchers.commons;
 
-import py.com.jaha.api.general.config.DtoMeta;
+import py.com.jaha.api.vouchers.config.DtoMeta;
 
 @DtoMeta
 public class ApiMessage {

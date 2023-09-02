@@ -1,4 +1,4 @@
-package py.com.jaha.api.general.infraestructure.adapters.out.sqlserver.config;
+package py.com.jaha.api.vouchers.infraestructure.adapters.out.sqlserver.config;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -21,7 +21,7 @@ import javax.sql.DataSource;
 @EnableJpaRepositories(
         entityManagerFactoryRef = "sqlServerEntityManagerFactory",
         transactionManagerRef = "sqlServerTransactionManager",
-        basePackages = { "py.com.jaha.api.general.infraestructure.adapters.out.sqlserver.**"}
+        basePackages = {"py.com.jaha.api.vouchers.infraestructure.adapters.out.sqlserver.**"}
 )
 public class SqlServerDbConfig {
 

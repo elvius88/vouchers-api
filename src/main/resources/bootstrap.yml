@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: ${GENERAL_NAME:generalServicesApi}
+    name: ${VOUCHERS_NAME:vouchersApi}
   profiles:
     active:
       default

@@ -1,4 +1,4 @@
-package py.com.jaha.api.general.commons;
+package py.com.jaha.api.vouchers.commons;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.ArrayList;

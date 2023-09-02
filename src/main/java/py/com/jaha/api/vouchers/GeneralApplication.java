@@ -1,6 +1,6 @@
-package py.com.jaha.api.general;
+package py.com.jaha.api.vouchers;
 
-import static py.com.jaha.api.general.constants.GlobalConstants.HOST_IP_NAME;
+import static py.com.jaha.api.vouchers.constants.GlobalConstants.HOST_IP_NAME;
 
 import java.net.InetAddress;
 import java.util.Locale;

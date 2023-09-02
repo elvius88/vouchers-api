@@ -1,4 +1,4 @@
-package py.com.jaha.api.general.config;
+package py.com.jaha.api.vouchers.config;
 
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
 import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
@@ -6,7 +6,7 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
 import static org.springframework.http.HttpStatus.UNAUTHORIZED;
 
 import lombok.experimental.UtilityClass;
-import py.com.jaha.api.general.commons.ApiException;
+import py.com.jaha.api.vouchers.commons.ApiException;
 
 @UtilityClass
 public class ErrorHandler {

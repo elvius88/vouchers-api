@@ -1,4 +1,4 @@
-package py.com.jaha.api.general.utils;
+package py.com.jaha.api.vouchers.utils;
 
 import io.vavr.control.Try;
 import java.text.SimpleDateFormat;

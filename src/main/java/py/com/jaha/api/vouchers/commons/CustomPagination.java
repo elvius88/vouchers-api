@@ -1,9 +1,9 @@
-package py.com.jaha.api.general.commons;
+package py.com.jaha.api.vouchers.commons;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import py.com.jaha.api.general.config.DtoMeta;
+import py.com.jaha.api.vouchers.config.DtoMeta;
 
 @DtoMeta
 @NoArgsConstructor

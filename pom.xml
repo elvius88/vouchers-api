@@ -9,9 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>py.com.jaha.api</groupId>
-    <artifactId>general-api</artifactId>
+    <artifactId>vouchers-api</artifactId>
     <version>1.2.3</version>
-    <name>general services</name>
+    <name>vouchers-api</name>
+    <description>Vouchers API</description>
 
     <properties>
         <java.version>11</java.version>

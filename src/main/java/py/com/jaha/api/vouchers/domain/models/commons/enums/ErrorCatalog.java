@@ -1,4 +1,4 @@
-package py.com.jaha.api.general.domain.models.commons.enums;
+package py.com.jaha.api.vouchers.domain.models.commons.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

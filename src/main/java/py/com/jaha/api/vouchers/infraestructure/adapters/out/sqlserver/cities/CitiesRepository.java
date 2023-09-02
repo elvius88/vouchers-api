@@ -1,4 +1,4 @@
-package py.com.jaha.api.general.infraestructure.adapters.out.sqlserver.cities;
+package py.com.jaha.api.vouchers.infraestructure.adapters.out.sqlserver.cities;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

@@ -1,4 +1,4 @@
-package py.com.jaha.api.general.domain.usecases;
+package py.com.jaha.api.vouchers.domain.usecases;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;

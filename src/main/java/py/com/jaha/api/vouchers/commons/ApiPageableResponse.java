@@ -1,11 +1,11 @@
-package py.com.jaha.api.general.commons;
+package py.com.jaha.api.vouchers.commons;
 
 import java.util.List;
 import java.util.Optional;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import py.com.jaha.api.general.config.DtoMeta;
+import py.com.jaha.api.vouchers.config.DtoMeta;
 
 @DtoMeta
 @NoArgsConstructor

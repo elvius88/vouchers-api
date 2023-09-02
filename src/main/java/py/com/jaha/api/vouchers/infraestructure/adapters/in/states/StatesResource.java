@@ -1,7 +1,7 @@
-package py.com.jaha.api.general.infraestructure.adapters.in.states;
+package py.com.jaha.api.vouchers.infraestructure.adapters.in.states;
 
-import static py.com.jaha.api.general.commons.ApiVersions.API_VERSION_V1;
-import static py.com.jaha.api.general.constants.GlobalConstants.API_BASE;
+import static py.com.jaha.api.vouchers.commons.ApiVersions.API_VERSION_V1;
+import static py.com.jaha.api.vouchers.constants.GlobalConstants.API_BASE;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -16,13 +16,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-import py.com.jaha.api.general.commons.ApiError;
-import py.com.jaha.api.general.commons.ApiException;
-import py.com.jaha.api.general.commons.ApiResponse;
-import py.com.jaha.api.general.commons.Filterable;
-import py.com.jaha.api.general.domain.commands.states.GetStatesResponse;
-import py.com.jaha.api.general.domain.ports.in.GetStatesPort;
-import py.com.jaha.api.general.infraestructure.adapters.mappers.StatesCommandMapper;
+import py.com.jaha.api.vouchers.commons.ApiError;
+import py.com.jaha.api.vouchers.commons.ApiException;
+import py.com.jaha.api.vouchers.commons.ApiResponse;
+import py.com.jaha.api.vouchers.commons.Filterable;
+import py.com.jaha.api.vouchers.domain.commands.states.GetStatesResponse;
+import py.com.jaha.api.vouchers.domain.ports.in.GetStatesPort;
+import py.com.jaha.api.vouchers.infraestructure.adapters.mappers.StatesCommandMapper;
 
 @RestController
 @RequestMapping(value = "/" + API_BASE + "/general/" + API_VERSION_V1)

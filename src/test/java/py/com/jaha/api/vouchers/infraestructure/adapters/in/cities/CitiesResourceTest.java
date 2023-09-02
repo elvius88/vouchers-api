@@ -1,11 +1,11 @@
-package py.com.jaha.api.general.infraestructure.adapters.in.cities;
+package py.com.jaha.api.vouchers.infraestructure.adapters.in.cities;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static py.com.jaha.api.general.constants.GlobalConstants.API_BASE;
-import static py.com.jaha.api.general.constants.GlobalConstants.API_VERSION_1;
+import static py.com.jaha.api.vouchers.constants.GlobalConstants.API_BASE;
+import static py.com.jaha.api.vouchers.constants.GlobalConstants.API_VERSION_1;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,9 +21,9 @@ import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-import py.com.jaha.api.general.domain.commands.cities.GetCitiesResponse;
-import py.com.jaha.api.general.domain.ports.in.GetCitiesPort;
-import py.com.jaha.api.general.infraestructure.adapters.config.GetCitiesUseCaseConfig;
+import py.com.jaha.api.vouchers.domain.commands.cities.GetCitiesResponse;
+import py.com.jaha.api.vouchers.domain.ports.in.GetCitiesPort;
+import py.com.jaha.api.vouchers.infraestructure.adapters.config.GetCitiesUseCaseConfig;
 
 @RunWith(SpringRunner.class)
 @ActiveProfiles("test")

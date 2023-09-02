@@ -1,11 +1,11 @@
-package py.com.jaha.api.general.domain.commands.states;
+package py.com.jaha.api.vouchers.domain.commands.states;
 
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import py.com.jaha.api.general.config.IdNameDto;
+import py.com.jaha.api.vouchers.config.IdNameDto;
 
 @Data
 @Builder

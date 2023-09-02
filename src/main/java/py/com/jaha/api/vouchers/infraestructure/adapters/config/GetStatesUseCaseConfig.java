@@ -1,10 +1,10 @@
-package py.com.jaha.api.general.infraestructure.adapters.config;
+package py.com.jaha.api.vouchers.infraestructure.adapters.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import py.com.jaha.api.general.domain.ports.in.GetStatesPort;
-import py.com.jaha.api.general.domain.ports.out.StatesRepositoryPort;
-import py.com.jaha.api.general.domain.usecases.states.GetStatesUseCase;
+import py.com.jaha.api.vouchers.domain.ports.in.GetStatesPort;
+import py.com.jaha.api.vouchers.domain.ports.out.StatesRepositoryPort;
+import py.com.jaha.api.vouchers.domain.usecases.states.GetStatesUseCase;
 
 @Configuration
 public class GetStatesUseCaseConfig {

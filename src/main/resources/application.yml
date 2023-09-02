@@ -51,31 +51,8 @@ feign:
     name: transversal-backofficeApi
     path: /audits/v1
 
-cache:
-  tokens:
-    key-space: tokens
-    default-ttl: 60
-
 management:
   endpoints:
     web:
       exposure:
         include: "*"
-
-btservice:
-  url: ${BTSERVICE_URL:http://166.108.6.45:9075/bantotal/servlet}
-  connectTimeout: 10000
-  readTimeout: 30000
-  endpoint:
-    professions: /com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerProfesiones
-    documentTypes: /com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerTiposDeDocumento
-    cities: /com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerCiudadesLocalidades
-    cities-by-country: /com.dlya.bantotal.odwsbt_BTSConfig_v1?ListarCiudades
-    departments: /com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerEstadosProvinciasDepartamentos
-    countries: /com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerPaises
-    neighborhoods: /com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerBarriosColonias
-    exchangerates: /com.dlya.bantotal.odwsbt_BTSGeneric?ObtenerCotizaciones
-    calendars: /com.dlya.bantotal.odwsbt_BTSGeneric?ObtenerDiasNoHabiles
-    banks: /com.dlya.bantotal.odwsbt_BTSNotifications_v1?ObtenerListadoBancos
-    branches: /com.dlya.bantotal.odwsbt_BTSConfig?ObtenerSucursalesGNB
-    codigosswift: /com.dlya.bantotal.odwsbt_BTSGeneric?ObtenerCodigosSwift

@@ -1,4 +1,4 @@
-package py.com.jaha.api.general.domain.commands.cities;
+package py.com.jaha.api.vouchers.domain.commands.cities;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

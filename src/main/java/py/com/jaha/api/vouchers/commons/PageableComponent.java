@@ -1,9 +1,9 @@
-package py.com.jaha.api.general.commons;
+package py.com.jaha.api.vouchers.commons;
 
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
-import py.com.jaha.api.general.config.CustomPageable;
-import py.com.jaha.api.general.infraestructure.adapters.in.cities.CitiesResource;
+import py.com.jaha.api.vouchers.config.CustomPageable;
+import py.com.jaha.api.vouchers.infraestructure.adapters.in.cities.CitiesResource;
 
 @Component
 public class PageableComponent {

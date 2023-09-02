@@ -1,4 +1,4 @@
-package py.com.jaha.api.general.utils;
+package py.com.jaha.api.vouchers.utils;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;

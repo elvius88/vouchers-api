@@ -1,4 +1,4 @@
-package py.com.jaha.api.general.constants;
+package py.com.jaha.api.vouchers.constants;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

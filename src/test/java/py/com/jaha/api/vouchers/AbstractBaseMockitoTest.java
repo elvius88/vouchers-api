@@ -1,4 +1,4 @@
-package py.com.jaha.api.general;
+package py.com.jaha.api.vouchers;
 
 import java.io.IOException;
 import java.net.URISyntaxException;

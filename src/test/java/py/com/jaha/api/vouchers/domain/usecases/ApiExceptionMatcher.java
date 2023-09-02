@@ -1,8 +1,8 @@
-package py.com.jaha.api.general.domain.usecases;
+package py.com.jaha.api.vouchers.domain.usecases;
 
 import org.hamcrest.Description;
 import org.hamcrest.TypeSafeMatcher;
-import py.com.jaha.api.general.commons.ApiException;
+import py.com.jaha.api.vouchers.commons.ApiException;
 
 public class ApiExceptionMatcher extends TypeSafeMatcher<ApiException> {
 

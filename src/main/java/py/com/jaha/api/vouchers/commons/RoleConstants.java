@@ -1,4 +1,4 @@
-package py.com.jaha.api.general.commons;
+package py.com.jaha.api.vouchers.commons;
 
 public class RoleConstants {
 

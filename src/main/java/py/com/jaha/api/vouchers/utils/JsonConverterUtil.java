@@ -1,8 +1,8 @@
-package py.com.jaha.api.general.utils;
+package py.com.jaha.api.vouchers.utils;
 
-import static py.com.jaha.api.general.config.ErrorHandler.internalError;
-import static py.com.jaha.api.general.domain.models.commons.enums.ErrorCatalog.INVALID_JSON_DATA_PARAM;
-import static py.com.jaha.api.general.domain.models.commons.enums.ErrorCatalog.INVALID_JSON_DATA_SERIALIZE;
+import static py.com.jaha.api.vouchers.config.ErrorHandler.internalError;
+import static py.com.jaha.api.vouchers.domain.models.commons.enums.ErrorCatalog.INVALID_JSON_DATA_PARAM;
+import static py.com.jaha.api.vouchers.domain.models.commons.enums.ErrorCatalog.INVALID_JSON_DATA_SERIALIZE;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -23,7 +23,7 @@ import java.util.List;
 import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
-import py.com.jaha.api.general.constants.GlobalConstants;
+import py.com.jaha.api.vouchers.constants.GlobalConstants;
 
 @Slf4j
 @UtilityClass

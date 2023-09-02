@@ -1,4 +1,4 @@
-package py.com.jaha.api.general.domain.commands.states;
+package py.com.jaha.api.vouchers.domain.commands.states;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,4 +1,4 @@
-package py.com.jaha.api.general.config;
+package py.com.jaha.api.vouchers.config;
 
 import com.fasterxml.jackson.annotation.JacksonAnnotationsInside;
 import com.fasterxml.jackson.annotation.JsonFilter;

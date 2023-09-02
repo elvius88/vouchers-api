@@ -1,4 +1,4 @@
-package py.com.jaha.api.general.domain.models.commons;
+package py.com.jaha.api.vouchers.domain.models.commons;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,4 +1,4 @@
-package py.com.jaha.api.general.config;
+package py.com.jaha.api.vouchers.config;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
