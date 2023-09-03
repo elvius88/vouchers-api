@@ -1,0 +1,27 @@
+package py.com.jaha.api.vouchers.domain.commands.vouchers;
+
+import io.swagger.v3.oas.annotations.media.Schema;
+import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class GetVoucherResponse {
+
+  private String name;
+
+  private String description;
+
+  @Schema(name = "voucher_image_path")
+  private String imagePath;
+
+  private String terms;
+
+  @Schema(name = "voucher_images")
+  private List<VoucherImage> imagesPath;
+}
