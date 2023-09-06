@@ -13,4 +13,5 @@ public class GetVouchersCommand {
 
   private String id;
   private String clientId;
+  private String establishmentId;
 }

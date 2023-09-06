@@ -23,7 +23,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @EnableAsync
 @EnableFeignClients
 @Slf4j
-public class GeneralApplication {
+public class VouchersApplication {
 
     public static void main(String[] args) {
 
@@ -33,7 +33,7 @@ public class GeneralApplication {
         } catch (Exception e) {
             log.error("No se pudo obtener la ip para el hostIp attr");
         }
-        SpringApplication.run(GeneralApplication.class, args);
+        SpringApplication.run(VouchersApplication.class, args);
     }
 
     @PostConstruct

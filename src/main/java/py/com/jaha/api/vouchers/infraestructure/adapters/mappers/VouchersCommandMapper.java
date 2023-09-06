@@ -9,5 +9,7 @@ public interface VouchersCommandMapper {
 
   VouchersCommandMapper INSTANCE = Mappers.getMapper(VouchersCommandMapper.class);
 
-  GetVouchersCommand toCommand(String id, String clientId);
+  default GetVouchersCommand toCommand(String id, String clientId) {
+    return GetVouchersCommand.builder().id(id).clientId(clientId).build();
+  }
 }

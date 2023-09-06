@@ -7,5 +7,5 @@ public interface VouchersRepositoryPort {
 
   Voucher getVoucher(String id);
 
-  List<Voucher> getVouchersBy(String clientId);
+  List<Voucher> getVouchersBy(String clientId, String establishmentId);
 }

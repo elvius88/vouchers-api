@@ -1,5 +1,6 @@
 package py.com.jaha.api.vouchers.domain.usecases.vouchers;
 
+import io.vavr.control.Try;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import py.com.jaha.api.vouchers.domain.commands.vouchers.GetVouchersCommand;
@@ -15,6 +16,8 @@ public class GetVouchersUseCase implements GetVouchersPort {
 
   @Override
   public GetVouchersResponse execute(GetVouchersCommand command) {
-    return null;
+    return Try.of(() -> vouchersRepositoryPort.getVouchersBy(command.getClientId(), command.getClientId()))
+        .map(vouchers -> GetVouchersResponse.builder().build())
+        .get();
   }
 }
