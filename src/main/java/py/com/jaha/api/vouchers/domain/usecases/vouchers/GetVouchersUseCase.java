@@ -21,7 +21,7 @@ public class GetVouchersUseCase implements GetVouchersPort {
 
   @Override
   public GetVouchersResponse execute(GetVouchersCommand command) {
-    return Try.of(() -> vouchersRepositoryPort.getVouchersBy(command.getClientId(), command.getClientId()))
+    return Try.of(() -> vouchersRepositoryPort.getVouchersBy(command.getClientId(), command.getEstablishmentId()))
         .filter(vouchers -> !CollectionUtils.isEmpty(vouchers))
         .map(GetVoucherResponseMapper.INSTANCE::toGetVoucherResponseList)
         .map(response -> GetVouchersResponse.builder().vouchers(response).build())

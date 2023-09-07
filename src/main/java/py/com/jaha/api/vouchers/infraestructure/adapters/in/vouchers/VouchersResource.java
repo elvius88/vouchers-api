@@ -46,7 +46,7 @@ public class VouchersResource {
     @GetMapping("/vouchers/{id}")
     @ResponseStatus(HttpStatus.OK)
     public ApiResponse<GetVoucherResponse> getVoucher(@PathVariable String id) {
-        return ApiResponse.of(getVoucherUseCase.execute(VouchersCommandMapper.INSTANCE.toCommand(id, null)));
+        return ApiResponse.of(getVoucherUseCase.execute(VouchersCommandMapper.INSTANCE.toCommand(id, null, null)));
     }
 
     @Operation(summary = "Vouchers", description = "Get vouchers data by parameters filters")
@@ -58,7 +58,8 @@ public class VouchersResource {
     @Filterable
     @GetMapping("/vouchers")
     @ResponseStatus(HttpStatus.OK)
-    public ApiResponse<GetVouchersResponse> getVouchers(@RequestParam(required = false) String clientId) {
-        return ApiResponse.of(getVouchersUseCase.execute(VouchersCommandMapper.INSTANCE.toCommand(null, clientId)));
+    public ApiResponse<GetVouchersResponse> getVouchers(@RequestParam(required = false) String clientId,
+                                                        @RequestParam(required = false) String establishmentId) {
+        return ApiResponse.of(getVouchersUseCase.execute(VouchersCommandMapper.INSTANCE.toCommand(null, clientId, establishmentId)));
     }
 }
