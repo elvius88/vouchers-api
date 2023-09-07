@@ -1,4 +1,4 @@
-package py.com.jaha.api.vouchers.config;
+package py.com.jaha.api.vouchers.config.exception;
 
 import py.com.jaha.api.vouchers.config.exception.ApiException;
 import py.com.jaha.api.vouchers.config.exception.ApiExceptionType;
