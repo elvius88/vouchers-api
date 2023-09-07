@@ -23,10 +23,10 @@ echo "*******  Configuration Server se inicializo"
 echo "********************************************************"
 echo "Iniciando el GENERAL Api con el Discovery en:  $DISCOVERY_URI";
 echo "********************************************************"
-cd /usr/local/general-api/
+cd /usr/local/vouchers-api/
 java    -Djava.security.egd=file:/dev/./urandom  -Dserver.port=$SERVER_PORT \
         -Doracle.jdbc.timezoneAsRegion=false \
         -Deureka.client.serviceUrl.defaultZone=$DISCOVERY_URI \
         -Dspring.profiles.active=$PROFILE \
         $CUSTOM_ENVS \
-        -jar general-api-1.2.3.jar
+        -jar vouchers-api-1.2.3.jar
