@@ -1,4 +1,4 @@
-package py.com.jaha.api.vouchers.commons;
+package py.com.jaha.api.vouchers.config.exception;
 
 public class ApiException extends RuntimeException {
   private String code;
@@ -85,8 +85,6 @@ public class ApiException extends RuntimeException {
     this.useApiMessage = useApiMessage;
   }
 
-  /** @deprecated */
-  @Deprecated
   public ApiException(String code, String message, ApiExceptionType type) {
     super(message);
     this.userMessage = message;

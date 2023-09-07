@@ -1,6 +1,6 @@
 package py.com.jaha.api.vouchers.utils;
 
-import static py.com.jaha.api.vouchers.config.ErrorHandler.internalError;
+import static py.com.jaha.api.vouchers.config.exception.ErrorHandler.internalError;
 import static py.com.jaha.api.vouchers.domain.models.commons.enums.ErrorCatalog.INVALID_JSON_DATA_PARAM;
 import static py.com.jaha.api.vouchers.domain.models.commons.enums.ErrorCatalog.INVALID_JSON_DATA_SERIALIZE;
 

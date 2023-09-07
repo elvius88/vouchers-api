@@ -1,4 +1,4 @@
-package py.com.jaha.api.vouchers.commons;
+package py.com.jaha.api.vouchers.config.exception;
 
 public enum ApiMessageTypes {
   INFO,

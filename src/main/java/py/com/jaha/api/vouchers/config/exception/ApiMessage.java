@@ -1,7 +1,9 @@
-package py.com.jaha.api.vouchers.commons;
+package py.com.jaha.api.vouchers.config.exception;
 
+import lombok.Getter;
 import py.com.jaha.api.vouchers.config.DtoMeta;
 
+@Getter
 @DtoMeta
 public class ApiMessage {
   private String code;
@@ -32,26 +34,6 @@ public class ApiMessage {
   public String toString() {
     String var10000 = this.getCode();
     return "ApiMessage(code=" + var10000 + ", message=" + this.getMessage() + ", userMessage=" + this.getUserMessage() + ", type=" + this.getType() + ", useApiMessage=" + this.getUseApiMessage() + ")";
-  }
-
-  public String getCode() {
-    return this.code;
-  }
-
-  public String getMessage() {
-    return this.message;
-  }
-
-  public String getUserMessage() {
-    return this.userMessage;
-  }
-
-  public ApiMessageTypes getType() {
-    return this.type;
-  }
-
-  public Boolean getUseApiMessage() {
-    return this.useApiMessage;
   }
 
   public void setCode(final String code) {

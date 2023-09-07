@@ -21,7 +21,7 @@ public class VouchersRepositoryAdapter implements VouchersRepositoryPort {
   public Voucher getVoucher(String id) {
     return Try.of(() -> vouchersRepository.findById(id))
         .filter(Optional::isPresent)
-        .map(voucher -> VouchersMapper.INSTANCE.toDomain(voucher.get()))
+        .map(voucher -> VouchersMapper.INSTANCE.toDomain(voucher.orElse(null)))
         .get();
   }
 

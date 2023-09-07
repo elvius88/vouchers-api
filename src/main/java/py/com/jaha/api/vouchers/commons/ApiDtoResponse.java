@@ -4,6 +4,7 @@ import java.util.List;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import py.com.jaha.api.vouchers.config.exception.ApiMessage;
 
 @NoArgsConstructor
 @Getter

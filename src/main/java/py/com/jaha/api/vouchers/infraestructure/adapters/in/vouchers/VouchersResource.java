@@ -1,7 +1,7 @@
 package py.com.jaha.api.vouchers.infraestructure.adapters.in.vouchers;
 
-import static py.com.jaha.api.vouchers.constants.GlobalConstants.API_BASE;
 import static py.com.jaha.api.vouchers.commons.ApiVersions.API_VERSION_V1;
+import static py.com.jaha.api.vouchers.constants.GlobalConstants.API_BASE;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -17,13 +17,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+import py.com.jaha.api.vouchers.config.exception.ApiError;
+import py.com.jaha.api.vouchers.commons.ApiResponse;
 import py.com.jaha.api.vouchers.commons.Filterable;
 import py.com.jaha.api.vouchers.domain.commands.vouchers.GetVoucherResponse;
 import py.com.jaha.api.vouchers.domain.commands.vouchers.GetVouchersResponse;
 import py.com.jaha.api.vouchers.domain.ports.in.GetVoucherPort;
-import py.com.jaha.api.vouchers.commons.ApiError;
-import py.com.jaha.api.vouchers.commons.ApiException;
-import py.com.jaha.api.vouchers.commons.ApiResponse;
 import py.com.jaha.api.vouchers.domain.ports.in.GetVouchersPort;
 import py.com.jaha.api.vouchers.infraestructure.adapters.mappers.VouchersCommandMapper;
 
@@ -46,7 +45,7 @@ public class VouchersResource {
     @Filterable
     @GetMapping("/vouchers/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public ApiResponse<GetVoucherResponse> getVoucher(@PathVariable String id) throws ApiException {
+    public ApiResponse<GetVoucherResponse> getVoucher(@PathVariable String id) {
         return ApiResponse.of(getVoucherUseCase.execute(VouchersCommandMapper.INSTANCE.toCommand(id, null)));
     }
 
@@ -59,7 +58,7 @@ public class VouchersResource {
     @Filterable
     @GetMapping("/vouchers")
     @ResponseStatus(HttpStatus.OK)
-    public ApiResponse<GetVouchersResponse> getVouchers(@RequestParam(required = false) String clientId) throws ApiException {
+    public ApiResponse<GetVouchersResponse> getVouchers(@RequestParam(required = false) String clientId) {
         return ApiResponse.of(getVouchersUseCase.execute(VouchersCommandMapper.INSTANCE.toCommand(null, clientId)));
     }
 }
