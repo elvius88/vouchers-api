@@ -3,8 +3,6 @@ package py.com.jaha.api.vouchers.domain.models.commons.enums;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-import java.util.Arrays;
-
 @Getter
 @AllArgsConstructor
 public enum ErrorCatalog {
