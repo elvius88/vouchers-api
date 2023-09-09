@@ -1,4 +1,4 @@
-package py.com.jaha.api.vouchers.domain.models.vouchers;
+package py.com.jaha.api.vouchers.domain.commands.vouchers;
 
 import java.io.Serializable;
 import java.time.OffsetDateTime;
@@ -15,11 +15,8 @@ import lombok.ToString;
 @NoArgsConstructor
 @Builder
 @ToString
-public class Day implements Serializable {
+public class GetDayResponse implements Serializable {
 
   private String id;
   private String name;
-  private Integer orderDay;
-  private OffsetDateTime createdAt;
-  private OffsetDateTime updatedAt;
 }

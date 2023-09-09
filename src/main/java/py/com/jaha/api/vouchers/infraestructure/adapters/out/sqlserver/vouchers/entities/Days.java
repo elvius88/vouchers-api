@@ -1,8 +1,6 @@
 package py.com.jaha.api.vouchers.infraestructure.adapters.out.sqlserver.vouchers.entities;
 
 import java.io.Serializable;
-import java.time.LocalDate;
-import java.time.LocalTime;
 import java.time.OffsetDateTime;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -32,8 +30,8 @@ public class Days implements Serializable {
   @Column(name = "name", nullable = false)
   private String name;
 
-  @Column(name = "order", nullable = false)
-  private Integer order;
+  @Column(name = "order_day", nullable = false)
+  private Integer orderDay;
 
   @Column(name = "created_at", nullable = false, updatable = false)
   private OffsetDateTime createdAt;

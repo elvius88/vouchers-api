@@ -4,17 +4,20 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.OffsetDateTime;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
+@Builder(toBuilder = true)
+@ToString
 public class Voucher implements Serializable {
 
   private String id;
@@ -26,6 +29,7 @@ public class Voucher implements Serializable {
   private LocalTime startHour;
   private LocalDate endDate;
   private LocalTime endHour;
+  private List<Day> days;
   private OffsetDateTime createdAt;
   private OffsetDateTime updatedAt;
 }
