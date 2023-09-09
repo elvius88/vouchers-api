@@ -35,7 +35,7 @@ public class Vouchers implements Serializable {
   @Column(name = "description", nullable = false)
   private String description;
 
-  @Column(name = "coupon_image_path", nullable = false)
+  @Column(name = "voucher_image_path", nullable = false)
   private String imagePath;
 
   @Column(name = "term", nullable = false)
